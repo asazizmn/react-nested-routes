@@ -19,13 +19,15 @@ const cuisines = [
 
 
 
-function Cuisine({ match }) {
+function Cuisine({ match, restaurant }) {
   const cuisine = cuisines.find(({ id }) => id === match.params.id)
 
   return (
     <div>
       <h2>{cuisine.name}</h2>
       <p>This is the {cuisine.name} description page</p>
+      <hr />
+      <p>For enquiries please call: {restaurant}, +852 12345678</p>
     </div>
   )
 }
@@ -50,6 +52,7 @@ function Cuisines({ match }) {
         return (
           <Cuisine
             match={match}
+            restaurant={"Barakat Foods"}
           />
         )
       }} />
