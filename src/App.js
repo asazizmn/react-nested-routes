@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 
 
-const topics = [
+const cuisines = [
   {
     name: 'Asian',
     id: 'asian'
@@ -19,13 +19,13 @@ const topics = [
 
 
 
-function Topic({ match }) {
-  const topic = topics.find(({ id }) => id === match.params.id)
+function Cuisine({ match }) {
+  const cuisine = cuisines.find(({ id }) => id === match.params.id)
 
   return (
     <div>
-      <h2>{topic.name}</h2>
-      <p>This is the {topic.name} description page</p>
+      <h2>{cuisine.name}</h2>
+      <p>This is the {cuisine.name} description page</p>
     </div>
   )
 }
@@ -36,7 +36,7 @@ function Cuisines({ match }) {
     <div>
       <h1>Cuisines</h1>
       <ul>
-        {topics.map(({ name, id }) => (
+        {cuisines.map(({ name, id }) => (
           <li key={id}>
             <Link to={`${match.url}/${id}`}>{name}</Link>
           </li>
@@ -45,7 +45,7 @@ function Cuisines({ match }) {
 
       <hr />
 
-      <Route path={`${match.path}/:id`} component={Topic} />
+      <Route path={`${match.path}/:id`} component={Cuisine} />
     </div>
   )
 }
