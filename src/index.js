@@ -8,6 +8,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+// please update this to "./App.v1" to test version 1
 import App from "./App.v2";
 
 
