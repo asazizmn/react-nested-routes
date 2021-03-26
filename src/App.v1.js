@@ -1,3 +1,7 @@
+/*
+ * A simple web app to test the react-router and nested routes
+ */
+
 import React from 'react'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 
