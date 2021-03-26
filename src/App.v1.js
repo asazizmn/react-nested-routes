@@ -1,5 +1,6 @@
 /*
  * A simple web app to test the react-router and nested routes
+ * To test this version, please change index.js accordingly
  */
 
 import React from 'react'

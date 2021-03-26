@@ -1,5 +1,6 @@
 /*
  * A simple web app to test the react-router, nested routes, and passing props to rendered components with it.
+ * To test this version, please change index.js accordingly
  */
 
 
