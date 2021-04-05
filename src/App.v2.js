@@ -26,6 +26,12 @@ const cuisines = [
 
 
 function Cuisine({ match, restaurant }) {
+  
+  // this will traverse the `cuisines array` as described above
+  // and return each element, in this case destructuring `id` to use it only
+  // and eventually check which one of the array id's actually matches the `:id` from the url
+  //
+  // i.e. Array.find(element => matching test)
   const cuisine = cuisines.find(({ id }) => id === match.params.id)
 
   return (
